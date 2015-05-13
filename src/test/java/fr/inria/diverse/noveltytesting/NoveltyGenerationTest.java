@@ -53,7 +53,7 @@ public class NoveltyGenerationTest {
 	
 		//Novelty parameters
 		this.popSize = 100;
-		this.numberGenerations = 10;
+		this.numberGenerations = 100;
 		this.limit = 100000;
 		this.k =30;
 		this.threshold =30;
@@ -92,9 +92,9 @@ public class NoveltyGenerationTest {
 			engine.executeMethods(pop);
 
 			engine.evaluate(pop);
-			
+
 			//pop.accept(visitor);
-       	 
+ 
 			engine.geneticProcess(pop);
 			
 			engine.generateNewData(pop);
