@@ -60,7 +60,7 @@ public class NoveltyGenerationTest {
 		
 	   
 		
-		File  file = new File("target/ffmpeg/ffmpegScript.sh");
+		File  file = new File("ffmpeg/ffmpegScript.sh");
 	    if (!file.exists()) {
 	         throw new Exception("le fichier est introuvable !");
 	     }
@@ -101,7 +101,7 @@ public class NoveltyGenerationTest {
 
 		}
 		
-		System.out.println("Script generated at target/mmpeg/ffmpegScript.sh");
+		System.out.println("Script generated at ffmpeg/ffmpegScript.sh");
 		
 	}
 }
