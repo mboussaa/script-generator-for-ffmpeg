@@ -10,6 +10,8 @@ import fr.inria.diverse.noveltytesting.classfinder.ClassFinderImpl;
 import fr.inria.diverse.noveltytesting.model.Population;
 import fr.inria.diverse.noveltytesting.noveltyengine.NoveltyEngine;
 import fr.inria.diverse.noveltytesting.noveltyengine.NoveltyEngineImpl;
+import fr.inria.diverse.noveltytesting.sut.examples;
+import fr.inria.diverse.noveltytesting.sut.examplesInterface;
 import fr.inria.diverse.noveltytesting.visitor.InputOutputVisitor;
 import fr.inria.diverse.noveltytesting.visitor.Visitor;
 
@@ -53,7 +55,7 @@ public class NoveltyGenerationTest {
 	
 		//Novelty parameters
 		this.popSize = 100;
-		this.numberGenerations = 100;
+		this.numberGenerations = 1;
 		this.limit = 100000;
 		this.k =30;
 		this.threshold =30;
@@ -88,7 +90,7 @@ public class NoveltyGenerationTest {
 
 		Visitor visitor = new InputOutputVisitor();
 		for (int i = 0; i < this.numberGenerations; i++) {
-	
+	/*
 			engine.executeMethods(pop);
 
 			engine.evaluate(pop);
@@ -98,7 +100,9 @@ public class NoveltyGenerationTest {
 			engine.geneticProcess(pop);
 			
 			engine.generateNewData(pop);
-
+*/
+			examplesInterface e=new examples();
+			e.AVI2MP4_Sample();
 		}
 		
 		System.out.println("Script generated at ffmpeg/ffmpegScript.sh");
