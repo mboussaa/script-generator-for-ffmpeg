@@ -15,7 +15,7 @@ public class examples implements examplesInterface{
 
 	@Override
 	public String AVI2MP4_Sample() {
-		String avi2mp4="/root/bin/ffmpeg -i inputVideo1.avi -ab 56 -ar 44100 -b 200 -r 15 -s 320x240 -f flv video_finale.flv";
+		String avi2mp4="/root/bin/ffmpeg -i /tmp/inputVideo1.avi -ab 56 -ar 44100 -b 200 -r 15 -s 320x240 -f flv video_finale.flv";
 		for (int i = 0; i < 10; i++) {
 		try { 
 			FileWriter fw = new FileWriter("ffmpeg/ffmpegScript.sh", true);
