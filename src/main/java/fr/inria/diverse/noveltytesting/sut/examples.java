@@ -14,22 +14,31 @@ public class examples implements examplesInterface{
 
 
 	@Override
-	public String AVI2MP4_Sample() {
-		String avi2mp4="/root/bin/ffmpeg -y -i /tmp/inputVideo1.avi -b 4000k -minrate 4000k -maxrate 4000k -bufsize 1835k outputVideo1.m2v";
+	public String AVI2MP4_Sample() throws IOException {
+		String avi2mp4="rm cat /tmp/stats.csv    "
+				+ "\necho \"Real_Time(s),User_Time(s),Sys_Time(s),CPU(%),RSS/RAM(Kb)\" > /tmp/stats.csv\n";
+		FileWriter fw = new FileWriter("ffmpeg/ffmpegScript.sh", true);
+		BufferedWriter bw = new BufferedWriter ( fw ) ; 
+		//bw.newLine(); 
+		PrintWriter pw = new PrintWriter ( bw ) ; 
+		pw.print(avi2mp4) ; 
+		//pw.close( ) ; 
 		for (int i = 0; i < 10; i++) {
-		try { 
-			FileWriter fw = new FileWriter("ffmpeg/ffmpegScript.sh", true);
-			BufferedWriter bw = new BufferedWriter ( fw ) ; 
-			bw.newLine(); 
-			PrintWriter pw = new PrintWriter ( bw ) ; 
+		//try { 
+			avi2mp4="/usr/bin/time -ao /tmp/stats.csv -f \"%e,%U,%S,%P,%M\" /root/bin/ffmpeg -y -i /tmp/inputVideo1.avi "
+					+ "-b 4000k -minrate 4000k -maxrate 4000k -bufsize 1835k outputVideo1.m2v\n";
+			//FileWriter fw = new FileWriter("ffmpeg/ffmpegScript.sh", true);
+			//BufferedWriter bw = new BufferedWriter ( fw ) ; 
+			//bw.newLine(); 
+			//PrintWriter pw = new PrintWriter ( bw ) ; 
 			pw.print(avi2mp4) ; 
-			pw.close( ) ; 
-			} 
-			catch ( IOException e ) { 
-			System.out.println ( " Problème à l’écriture du fichier " ) ; 
-			System.exit(0); 
-			} 
-		}
+			bw.newLine();
+			//} 
+			//catch ( IOException e ) { 
+			//System.out.println ( " Problème à l’écriture du fichier " ) ; 
+			//System.exit(0); 
+			//} 
+		}pw.close( ) ; 
 		return avi2mp4;
 
 	}
