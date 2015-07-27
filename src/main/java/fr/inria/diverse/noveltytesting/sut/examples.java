@@ -25,7 +25,7 @@ public class examples implements examplesInterface{
 		//pw.close( ) ; 
 		for (int i = 0; i < 10; i++) {
 		//try { 
-			avi2mp4="time -ao /tmp/stats.csv -f \"%e,%U,%S,%P,%M\" /root/bin/ffmpeg -y -i /tmp/inputVideo1.avi "
+			avi2mp4="/usr/bin/time -ao /tmp/stats.csv -f \"%e,%U,%S,%P,%M\" /root/bin/ffmpeg -y -i /tmp/inputVideo1.avi "
 					+ "-b 4000k -minrate 4000k -maxrate 4000k -bufsize 1835k outputVideo1.m2v\n";
 			//FileWriter fw = new FileWriter("ffmpeg/ffmpegScript.sh", true);
 			//BufferedWriter bw = new BufferedWriter ( fw ) ; 
