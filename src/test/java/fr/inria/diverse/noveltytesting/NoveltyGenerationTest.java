@@ -90,7 +90,7 @@ public class NoveltyGenerationTest {
 
 		Visitor visitor = new InputOutputVisitor();
 		for (int i = 0; i < this.numberGenerations; i++) {
-	/*
+
 			engine.executeMethods(pop);
 
 			engine.evaluate(pop);
@@ -100,9 +100,9 @@ public class NoveltyGenerationTest {
 			engine.geneticProcess(pop);
 			
 			engine.generateNewData(pop);
-*/
-			examplesInterface e=new examples();
-			e.AVI2MP4_Sample();
+
+//			examplesInterface e=new examples();
+//			e.AVI2MP4_Sample();
 		}
 		
 		System.out.println("Script generated at ffmpeg/ffmpegScript.sh");

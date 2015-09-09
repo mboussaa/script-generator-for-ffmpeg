@@ -18,12 +18,12 @@ public class RandomGenerator extends AbstractGenerator {
 	
 	@Override
 	protected int genInteger(Parameter p) {
-		return new Random().nextInt(10000);
+		return new Random().nextInt(100);
 	}
 
 	@Override
 	protected float genFloat(Parameter p) {
-		return new Random().nextFloat()*10000;
+		return new Random().nextFloat()*100;
 		//return (new Random().nextFloat())*Float.MAX_VALUE;
 	}
 
