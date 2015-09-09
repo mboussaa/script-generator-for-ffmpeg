@@ -52,15 +52,15 @@ public class NoveltyGenerationTest {
 		this.myPackage = "fr.inria.diverse.noveltytesting.sut";
 		this.myInterface = "fr.inria.diverse.noveltytesting.sut.examplesInterface";
 		
-	
+	    
 		//Novelty parameters
 		this.popSize = 100;
-		this.numberGenerations = 1;
+		this.numberGenerations = 1000;
 		this.limit = 100000;
 		this.k =30;
 		this.threshold =30;
 		
-	   
+	    
 		
 		File  file = new File("ffmpeg/ffmpegScript.sh");
 	    if (!file.exists()) {
